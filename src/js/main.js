@@ -38,21 +38,30 @@ var MeetUpApi = (function(options) {
 		console.log($apiResults.data[0].yes_rsvp_count); //how many people are going so far
 		console.log($apiResults.data[0].venue.lat); //coordinates
 		console.log($apiResults.data[0].venue.lon); //coordinates
+		console.log($apiResults.data[0].venue.name); //location
 
-		for (var i = 0; i < $apiResults.length; i++) {
+		for (var i = 0; i < $apiResults.data.length; i++) {
 			var test = document.querySelector(".test");
-			// var eventTime = document.querySelector(".event__time");
-			// var eventName = document.querySelector(".event__name");
-			// var eventLocation = document.querySelector(".event__location");
+			var eventTime = document.querySelector(".event__time");
+			var eventName = document.querySelector(".event__name");
+			var eventLocation = document.querySelector(".event__location");
 
-			var meetUpName = document.createElement("li");
+			var meetUpTime = document.createElement("div");
+			$(meetUpTime).html($apiResults.data[i].time);
+
+			var meetUpName = document.createElement("div");
 			$(meetUpName).html($apiResults.data[i].name);
 
-			var meetUpGroup = document.createElement("li");
-			$(meetUpGroup).html($apiResults.data[i].group.name);
+			if ($apiResults.data[i].venue.name) {
+				var meetUpLocation = document.createElement("div");
+				$(meetUpLocation).html($apiResults.data[i].venue.name);
+				eventLocation.appendChild(meetUpLocation);
+			} else {
+				console.log("no location provided");
+			}
 
-			test.appendChild(meetUpName);
-			test.appendChild(meetUpGroup);
+			eventName.appendChild(meetUpName);
+			eventTime.appendChild(meetUpTime);
 		}
 
 	}

@@ -1,0 +1,114 @@
+@import "bootstrap-variables.sass";
+@import "../../vendors/bootstrap/stylesheets/bootstrap";
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	background: #FAFAFA;
+
+	// background: lightblue;
+
+}
+
+.header {
+	background: #fff;
+	height: 80px;
+
+	.logo {
+
+
+		& img {
+			width: 200px;
+			margin: 0 auto;
+			margin-top: 5px;
+			display: block;
+		}
+	}
+}
+
+.hero {
+	margin-bottom: 20px;
+}
+
+.headline {
+	background: #ED1C40;
+	font-family: 'Roboto', sans-serif;
+	color: #fff;
+	text-align: center;
+	margin-bottom: 20px;
+
+	& p {
+		font-weight: 300;
+	}
+}
+
+
+.event__date {
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.event {
+	display: flex;
+	border: 1px solid #E0E0E0;
+	font-size: 1.3em;
+	line-height: 2;
+	padding: 20px;
+	margin-bottom: 5px;
+
+	.event__time {
+		margin-right: 20px;
+	} 
+
+	.event__name {
+		font-weight: bold;
+	}
+
+	.event__location {
+		font-size: 0.8em;
+	}
+}
+
+#map {
+	border: 1px solid black;
+	height: 250px;
+
+}
+
+footer {
+	margin-top: 20px;
+	background: black;
+	color: white;
+
+	.footer-buttons button {
+		margin-bottom: 20px;
+	}
+
+
+
+	.impressum {
+		list-style: none;
+		display: flex;
+		padding-left: 0px;
+
+		& li {
+			padding-right: 20px;
+			margin: 20px 0px;
+		}
+	}
+
+	.copywrite {
+		margin-bottom: 20px;
+	}
+}
+
+
+
+
+

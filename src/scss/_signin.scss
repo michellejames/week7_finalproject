@@ -1,0 +1,15 @@
+.signin {
+	& h2 {
+		margin-bottom: 30px;
+	} 
+
+	& form {
+		margin-bottom: 50px;
+	}
+	
+	#exampleInputEmail3,
+	#exampleInputPassword3,
+	.checkbox {
+		margin-right: 20px;
+	}
+}

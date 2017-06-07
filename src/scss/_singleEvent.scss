@@ -1,0 +1,56 @@
+.singleEvent {
+	display: flex;
+	flex-direction: column;
+
+	.singleEvent__name {
+		font-size: 1.3em;
+		margin-bottom: 5px;
+	}
+
+	.event__time__parent,
+	.event__location__parent {
+		display: flex;
+		align-items: center;
+		margin-bottom: 5px;
+	}
+
+	.singleEvent__time {
+		font-size: 1.2em;
+		color: black;
+		margin-left: 20px;
+	}
+
+	.singleEvent__location {
+		font-size: 1.2em;
+		margin-left: 20px;
+	} 
+
+	.singleEvent__group {
+		font-size: 1.2em;
+		margin-bottom: 20px;
+	}
+
+
+	.singleEvent__rsvp {
+		font-size: 1em;
+		margin-top: 20px;
+	}
+
+	.event__description {
+		margin: 40px 0px;
+		font-style: italic;
+		overflow: hidden;
+	}
+
+	.attend__event {
+		background: #ED1C40;
+		color: #fff;
+		border: none;
+		border-radius: 5px;
+		padding: 10px 20px;
+
+		&:hover {
+			color: #333;
+		}
+	}
+}

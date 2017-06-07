@@ -1,0 +1,16 @@
+.header {
+	background: transparent;
+	height: 80px;
+	margin-top: 70px;
+
+	.logo {
+		padding: 0px;
+
+		& img {
+			width: 200px;
+			margin: 0 auto;
+			margin-top: 5px;
+			display: block;
+		}
+	}
+}
